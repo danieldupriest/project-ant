@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ant Sim</title>
+	<script src="AntSim.js"></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="container">
+    <canvas id="canvasBack" width="512" height="512"></canvas>
+    <canvas id="canvasFore" width="512" height="512"></canvas>
+  </div>
+  <script>
+    const canvasBack = document.getElementById("canvasBack");
+    const contextBack = canvasBack.getContext('2d');
+    const canvasFore = document.getElementById("canvasFore");
+    const contextFore = canvasFore.getContext('2d');
+	  const antSim = new AntSim(contextBack, contextFore);
+    antSim.addAnts(30);
+    antSim.render();
+	</script>
+</body>
+</html>
